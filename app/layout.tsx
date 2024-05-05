@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={cn(inter.className, "min-h-dvh flex flex-col")}>
         {process.env.NEXT_PUBLIC_CONSTRUCTION_STATUS === "IN_PROGRESS" ? (
           <div className="flex-1 flex flex-col h-full w-full items-center justify-center text-2xl text-yellow-400">
-            <UnderConstruction />
+            <div className="max-w-xl">
+              <UnderConstruction />
+            </div>
           </div>
         ) : (
           children
